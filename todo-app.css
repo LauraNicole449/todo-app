@@ -1,9 +1,7 @@
-
 body{
   margin:0;
   background-color: #181824;
 }
-
 .img-background{
   display: block;
   width: 1920px;
@@ -16,27 +14,22 @@ body{
 .createTodo{
   position: absolute;
   top: 20%;
-  left: 45%;
-  padding: 10px;
+  left: 35%;
+  width: 450px;;
+  height: 70px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  background-color: white;
-  }
-.listTodo{
-  color: white;
-  left:45%;
-  background-size: contain;
-  display:block;
-  height: 80px;
-  width: 150px;
-  top:30%;
-  margin:12px;
-  position: absolute;
-  list-style: none;
- 
-}
-.listTodo li{
- 
+  color:white;
   background-color: #25273c;
 }
+.listTodo {
+  color: white;
+  left: 35%;
+  display: block;
+  width: 350px;
+  top: 30%;
+  position: absolute;
+  list-style: none;
+}
+
