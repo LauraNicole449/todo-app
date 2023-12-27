@@ -51,32 +51,18 @@ function addTodoList(){
         
         console.log("assa");
     }
-    
-}
+  }
 
-let markTask = 1;
  function completeTask() {
-  if(markTask === 2){
-    console.log("1a");
-    return;
-  }
-  else{
+  if(!this.dataset.completed){
     this.style.textDecoration = "line-through";
-    this.style.color = "#47495e"
-    markTask =1;
-    console.log("2a");
-  }
-
-  if(markTask === 1){
-    console.log("1b");
-    return;
-  }else{
+    this.style.color = "#47495e";
+    this.dataset.completed = true;
+  } else {
     this.style.textDecoration = "none";
-    this.style.color = "white"
-    markTask =2;
-    console.log("2b");
+    this.style.color = "white";
+    delete this.dataset.completed;
   }
-      console.log(markTask);
 }
 
     
