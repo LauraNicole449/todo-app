@@ -19,7 +19,7 @@ body{
   height: 70px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   color:white;
   background-color: #25273c;
 }
@@ -31,5 +31,6 @@ body{
   top: 30%;
   position: absolute;
   list-style: none;
+  font-size: 20px;
 }
 

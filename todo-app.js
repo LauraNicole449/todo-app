@@ -12,16 +12,18 @@ function addTodoList(){
         if(inputValue === ""){
             return inputValue;
         }else{
-            
+          newListElement.appendChild(divElement);
             
             imgElement.src = "images/icon-check.svg"; 
           //IMAGE CHECK ELEMENT
-            newListElement.appendChild(divElement).style.width = "10px";
-            newListElement.appendChild(divElement).style.height = "10px";
+            newListElement.appendChild(divElement).style.width = "15px";
+            newListElement.appendChild(divElement).style.height = "15px";
             newListElement.appendChild(divElement).style.marginRight = "10px";
-            newListElement.appendChild(divElement).style.backgroundColor = "#a07ef5";
+            newListElement.appendChild(divElement).style.backgroundColor = "red";
+            newListElement.appendChild(divElement).style.borderWidth = "40px"
+            newListElement.appendChild(divElement).style.borderColor = "#47495e";
             
-            newListElement.appendChild(divElement).style.borderRadius = "100%";
+            
             
             
            
@@ -34,7 +36,7 @@ function addTodoList(){
             todoList.appendChild(newListElement).style.padding = "25px";
             todoList.appendChild(newListElement).style.borderBottom = "solid";
             todoList.appendChild(newListElement).style.display = "flex";
-            todoList.appendChild(newListElement).style.backgroundColor = "red";
+            todoList.appendChild(newListElement).style.backgroundColor = "#25273c";
             todoList.appendChild(newListElement).style.borderBottomWidth = "1px";
             todoList.appendChild(newListElement).style.borderBottomColor = "white";
             todoList.appendChild(newListElement).setAttribute("id", taskId);
@@ -52,11 +54,44 @@ function addTodoList(){
     
 }
 
+let markTask = 1;
+ function completeTask() {
+  if(markTask === 2){
+    console.log("1a");
+    return;
+  }
+  else{
+    this.style.textDecoration = "line-through";
+    this.style.color = "#47495e"
+    markTask =1;
+    console.log("2a");
+  }
 
- function completeTask(elemento) {
-      if (elemento.style.backgroundColor === "red") {
-        elemento.style.backgroundColor = "blue";
-      } else {
-        elemento.style.backgroundColor = "red";
-      }
+  if(markTask === 1){
+    console.log("1b");
+    return;
+  }else{
+    this.style.textDecoration = "none";
+    this.style.color = "white"
+    markTask =2;
+    console.log("2b");
+  }
+      console.log(markTask);
+}
+
+    
+//RESERVE THIS CODE
+  /*  if (toggleColor === 1) {
+      this.style.textDecoration = "line-through";
+      this.style.color = "#47495e"
+      this.toggleColor =2;
+    }else if(toggleColor ===2){
+      
+      console.log("hola");
+     
     }
+     else {
+      this.style.textDecoration = "none";
+      this.style.color = "white"
+    }
+    toggleColor = !toggleColor;*/
