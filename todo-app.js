@@ -12,8 +12,6 @@ function addTodoList(){
         if(inputValue === ""){
             return inputValue;
         }else{
-          
-            
             imgCross.src = "images/icon-cross.svg"; 
           //IMAGE CHECK ELEMENT
             newListElement.appendChild(checkElement).style.width = "15px";
@@ -25,11 +23,6 @@ function addTodoList(){
             newListElement.appendChild(checkElement).style.borderColor = "#47495e";
             newListElement.appendChild(checkElement).style.borderStyle = "solid";
 
-            
-            
-            
-            
-            
             //LIST ELEMENTS
             newListElement.appendChild(textNode);
             
@@ -41,21 +34,26 @@ function addTodoList(){
             todoList.appendChild(newListElement).style.borderBottomColor = "white";
             todoList.appendChild(newListElement).setAttribute("id", taskId);
             todoList.appendChild(newListElement).onclick = completeTask;
-
+            todoList.appendChild(newListElement).onmouseover = addImgCross;
             //IMAGE CROSS
-            newListElement.appendChild(imgCross);
-            newListElement.appendChild(imgCross).onclick = deleteTask;
-
-
-
+            function addImgCross(){
+              if(addImgCross){
+                newListElement.appendChild(imgCross);
+                
+                console.log("img cross added");
+              }else{
+                newListElement.appendChild(imgCross);
+                console.log("img cross removed");
+              }
+              
+            }
+            
             document.getElementById("createTodo").value = "";
         }
         console.log(taskId);
         taskId = taskId+1;
         function completeTask() {
           if(!this.dataset.completed){
-            
-            
             this.style.textDecoration = "line-through";
             this.style.color = "#47495e";
             this.appendChild(checkElement).style.backgroundColor = "white";
@@ -76,7 +74,7 @@ function addTodoList(){
         function deleteTask(){
           var idList = event.target.id;
           document.getElementById(idList).remove();
-          console.log("imagen");
+          console.log("ekunuimagen");
           
         }
 
@@ -86,18 +84,3 @@ function addTodoList(){
 
 
  
-//RESERVE THIS CODE
-  /*  if (toggleColor === 1) {
-      this.style.textDecoration = "line-through";
-      this.style.color = "#47495e"
-      this.toggleColor =2;
-    }else if(toggleColor ===2){
-      
-      console.log("hola");
-     
-    }
-     else {
-      this.style.textDecoration = "none";
-      this.style.color = "white"
-    }
-    toggleColor = !toggleColor;*/
