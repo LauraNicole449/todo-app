@@ -1,26 +1,26 @@
-body{
-  margin:0;
+body {
+  margin: 0;
   background-color: #181824;
 }
-.img-background{
+.img-background {
   display: block;
   width: 1920px;
 }
-.title{
-  position:absolute;
+.title {
+  position: absolute;
   top: 10px;
   left: 400px;
 }
-.createTodo{
+.createTodo {
   position: absolute;
   top: 20%;
   left: 35%;
-  width: 450px;;
+  width: 450px;
   height: 70px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 20px;
-  color:white;
+  color: white;
   background-color: #25273c;
 }
 .listTodo {
@@ -34,3 +34,22 @@ body{
   font-size: 20px;
 }
 
+.check-icon-styles {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 100%;
+  background-color: #25273c;
+  border-width: 0.5px;
+  border-color: #47495e;
+  border-style: solid;
+}
+
+.new-list-styles {
+  padding: 25px;
+  border-bottom: solid;
+  display: flex;
+  background-color: #25273c;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+}

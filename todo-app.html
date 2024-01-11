@@ -1,23 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="todo-app.css">
-    
-    <script src="todo-app.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO App | Nicole 🔥</title>
+    <link rel="stylesheet" href="todo-app.css" />
+    <script src="todo-app.js" defer></script>
   </head>
 
   <body>
-    
-      
-      <img class="img-background" src="images/bg-desktop-dark.jpg">
-      <h2 class="title">T O D O</h2>
-     
-      <input id="createTodo" class="createTodo"  type="text" placeholder=" Create a new todo..." onkeydown="addTodoList()" onmousemove="addImgCross()">
-    
-    
-      <ul id="listTodo" class="listTodo"  >
-      </ul>
-    
+    <img
+      class="img-background"
+      src="images/bg-desktop-dark.jpg"
+      alt="Background Image"
+    />
 
+    <h1 id="title" class="title">T O D O</h1>
+    <label for="createTodo">Create a new todo:</label>
+
+    <input
+      id="createTodo"
+      class="createTodo"
+      type="text"
+      placeholder=" Create a new todo..."
+      onkeydown="addTodoList()"
+      onmousemove="addImgCross()"
+      aria-label="Create a new todo"
+    />
+
+    <ul id="listTodo" class="listTodo"></ul>
   </body>
-
 </html>
