@@ -13,6 +13,7 @@ function addTodoList () {
       return inputValue
     } else {
       imgCross.src = 'images/icon-cross.svg'
+      imgCross.onclick = deleteTask
 
       //IMAGE CHECK ELEMENT
       newListElement.appendChild(checkElement)
@@ -30,11 +31,8 @@ function addTodoList () {
       function addImgCross () {
         if (addImgCross) {
           newListElement.appendChild(imgCross)
-
-          console.log('img cross added')
         } else {
           newListElement.appendChild(imgCross)
-          console.log('img cross removed')
         }
       }
 
@@ -62,12 +60,8 @@ function addTodoList () {
       }
     }
 
-    function deleteTask () {
-      var idList = event.target.id
-      document.getElementById(idList).remove()
-      console.log('ekunuimagen')
+    function deleteTask (event) {
+      event.target.parentElement.remove()
     }
-
-    console.log('assa')
   }
 }
