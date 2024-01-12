@@ -2,13 +2,13 @@ body {
   margin: 0;
   background-color: #181824;
 }
-.c_ontainer{
+.container{
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg ,#153677,#4e085f);
   margin: 00px ;
   position: relative;
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
