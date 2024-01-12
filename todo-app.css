@@ -2,9 +2,20 @@ body {
   margin: 0;
   background-color: #181824;
 }
+.c_ontainer{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg ,#153677,#4e085f);
+  margin: 00px ;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
 .img-background {
   display: block;
-  width: 1920px;
+  width: 100%;
 }
 .title {
   position: absolute;
