@@ -26,15 +26,24 @@ function addTodoList () {
       newListElement.setAttribute('id', taskId)
       newListElement.onclick = completeTask
       newListElement.onmouseover = addImgCross
+      newListElement.onmouseleave = deleteImgCross // quitar la cruz cuando ...
 
       //IMAGE CROSS
-      function addImgCross () {
+      function addImgCross (e) {//recibir el objeto del evento
         if (addImgCross) {
           newListElement.appendChild(imgCross)
+          if(e.target.children[1])
+          e.target.children[1].hidden=false // volver a presentar la cruz
         } else {
           newListElement.appendChild(imgCross)
         }
       }
+
+      function deleteImgCross (e) {// funcion que oculta la cruz
+        //console.log("salio");
+        if(e.target.children[1])
+        e.target.children[1].hidden=true
+     }
 
       document.getElementById('createTodo').value = ''
     }
